@@ -13,7 +13,13 @@ fi
 # Echo commands
 set -x
 
-# Build the latest
+# If we are on a dirty branch, stop
+if test "$(git status --porcelain 2> /dev/null)" != ""; then
+  echo "Current branch is dirty. Please stash or commit changes." 1>&2
+  exit 1
+fi
+
+# Build the latest (seems to dissapear when we use `buildbranch`)
 ./node_modules/.bin/grunt build
 
 # DEV: We could use `npm-run-script` since as of 2.0, it supports variables
