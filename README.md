@@ -3,8 +3,7 @@ Application for Khan Academy
 
 http://twolfson.github.io/khan-application/
 
-**Plan:**
-
+### Plan
 - Implement basic with CSS sprites (because otherwise duplicate work)
 - Start on responsive
 - Use anchor for switching between pages
@@ -12,7 +11,7 @@ http://twolfson.github.io/khan-application/
     - On mobile, display all content in scrollable format
 
 ### Performance
-### Completed
+#### Completed
 - Delivered JSON with JS
     - No delay between page content and render waiting for external JS to download
 
@@ -29,8 +28,7 @@ http://twolfson.github.io/khan-application/
     - Smaller payload
     - Can be achieved now that we deliver the JSON with JS
 
-**TODOs:**
-
+### TODOs
 - Check inline TODOs
 - Relocate `.json` files to somewhere ideal (weird to load them for Jade from a `public/` directory
 
