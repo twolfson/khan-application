@@ -14,7 +14,7 @@ http://twolfson.github.io/khan-application/
 **Missing performance items:**
 - Minified HTML
 - Minified CSS
-- Crushed sprites
+- Optimized images
 - Separate spritesheets for sets of badges
     - Load the first 2 immediately, then lazy load remaining sets in background
 - Use SVG over PNG for better scaling and smaller weight
