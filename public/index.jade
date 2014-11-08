@@ -22,8 +22,9 @@ html
             //- `.full-badge` div added by JS on page load
       .browse-view
         .container.clearfix
-          p // TODO: Add full list of badges
-          p Ricotta smelly cheese cheeseburger. Cauliflower cheese melted cheese cheese and wine cheesy feet cow when the cheese comes out everybody"s happy croque monsieur hard cheese. Cheesecake swiss cheesy feet cheese and wine cheese slices camembert de normandie cheesecake stinking bishop. Gouda say cheese danish fontina danish fontina lancashire paneer roquefort swiss. Manchego mozzarella.
+          for category in categories
+            p= category.typeLabel
+            a e
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(src='js/main.js')

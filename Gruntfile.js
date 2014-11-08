@@ -71,7 +71,12 @@ module.exports = function(grunt) {
           src: ['public/index.jade'],
           dest: 'dist/index.html'
         }],
-        variables: {}
+        variables: {
+          // TODO: These should be `try/catch` loaded or lazy loaded
+          //   since `curl-dir` might not have yet occurred
+          badges: require('./public/js/badges.json'),
+          categories: require('./public/js/categories.json')
+        }
       }
     },
 
