@@ -48,6 +48,13 @@ module.exports = function(grunt) {
     },
 
     // Compiling and distribution
+    copy: {
+      'public': [{
+        expand: true,
+        src: 'public/{css,js}/*',
+        dest: 'dest/'
+      }]
+    },
     template: {
       jade: {
         files: [{
@@ -70,6 +77,7 @@ module.exports = function(grunt) {
   // TODO: Define custom task to download our images
 
   // Load in grunt tasks
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-curl');
