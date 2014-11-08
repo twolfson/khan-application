@@ -1,0 +1,122 @@
+[
+    {
+        "category": 0, 
+        "iconSrc": "https://www.kastatic.org/images/badges/meteorite-small.png", 
+        "typeLabel": "Meteorite Badges", 
+        "emailIconSrc": "https://www.kastatic.org/images/badges/meteorite-70x70.png", 
+        "largeIconSrc": "https://www.kastatic.org/images/badges/meteorite.png", 
+        "compactIconSrc": "https://www.kastatic.org/images/badges/meteorite-60x60.png", 
+        "translatedDescription": "Meteorite badges are common and easy to earn when just getting started.", 
+        "chartIconSrc": "https://www.kastatic.org/images/badges/meteorite-small-chart.png", 
+        "mediumIconSrc": "https://www.kastatic.org/images/badges/meteorite-medium.png", 
+        "CATEGORIES": [
+            0, 
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "description": "Meteorite badges are common and easy to earn when just getting started."
+    }, 
+    {
+        "category": 1, 
+        "iconSrc": "https://www.kastatic.org/images/badges/moon-small.png", 
+        "typeLabel": "Moon Badges", 
+        "emailIconSrc": "https://www.kastatic.org/images/badges/moon-70x70.png", 
+        "largeIconSrc": "https://www.kastatic.org/images/badges/moon.png", 
+        "compactIconSrc": "https://www.kastatic.org/images/badges/moon-60x60.png", 
+        "translatedDescription": "Moon badges are uncommon and represent an investment in learning.", 
+        "chartIconSrc": "https://www.kastatic.org/images/badges/moon-small-chart.png", 
+        "mediumIconSrc": "https://www.kastatic.org/images/badges/moon-medium.png", 
+        "CATEGORIES": [
+            0, 
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "description": "Moon badges are uncommon and represent an investment in learning."
+    }, 
+    {
+        "category": 2, 
+        "iconSrc": "https://www.kastatic.org/images/badges/earth-small.png", 
+        "typeLabel": "Earth Badges", 
+        "emailIconSrc": "https://www.kastatic.org/images/badges/earth-70x70.png", 
+        "largeIconSrc": "https://www.kastatic.org/images/badges/earth.png", 
+        "compactIconSrc": "https://www.kastatic.org/images/badges/earth-60x60.png", 
+        "translatedDescription": "Earth badges are rare. They require a significant amount of learning.", 
+        "chartIconSrc": "https://www.kastatic.org/images/badges/earth-small-chart.png", 
+        "mediumIconSrc": "https://www.kastatic.org/images/badges/earth-medium.png", 
+        "CATEGORIES": [
+            0, 
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "description": "Earth badges are rare. They require a significant amount of learning."
+    }, 
+    {
+        "category": 3, 
+        "iconSrc": "https://www.kastatic.org/images/badges/sun-small.png", 
+        "typeLabel": "Sun Badges", 
+        "emailIconSrc": "https://www.kastatic.org/images/badges/sun-70x70.png", 
+        "largeIconSrc": "https://www.kastatic.org/images/badges/sun.png", 
+        "compactIconSrc": "https://www.kastatic.org/images/badges/sun-60x60.png", 
+        "translatedDescription": "Sun badges are epic. Earning them is a true challenge, and they require impressive dedication.", 
+        "chartIconSrc": "https://www.kastatic.org/images/badges/sun-small-chart.png", 
+        "mediumIconSrc": "https://www.kastatic.org/images/badges/sun-medium.png", 
+        "CATEGORIES": [
+            0, 
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "description": "Sun badges are epic. Earning them is a true challenge, and they require impressive dedication."
+    }, 
+    {
+        "category": 4, 
+        "iconSrc": "https://www.kastatic.org/images/badges/eclipse-small.png", 
+        "typeLabel": "Black Hole Badges", 
+        "emailIconSrc": "https://www.kastatic.org/images/badges/eclipse-70x70.png", 
+        "largeIconSrc": "https://www.kastatic.org/images/badges/eclipse.png", 
+        "compactIconSrc": "https://www.kastatic.org/images/badges/eclipse-60x60.png", 
+        "translatedDescription": "Black Hole badges are legendary and unknown. They are the most unique Khan Academy awards.", 
+        "chartIconSrc": "https://www.kastatic.org/images/badges/eclipse-small-chart.png", 
+        "mediumIconSrc": "https://www.kastatic.org/images/badges/eclipse-medium.png", 
+        "CATEGORIES": [
+            0, 
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "description": "Black Hole badges are legendary and unknown. They are the most unique Khan Academy awards."
+    }, 
+    {
+        "category": 5, 
+        "iconSrc": "https://www.kastatic.org/images/badges/master-challenge-blue-small.png", 
+        "typeLabel": "Challenge Patches", 
+        "emailIconSrc": "https://www.kastatic.org/images/badges/master-challenge-blue-70x70.png", 
+        "largeIconSrc": "https://www.kastatic.org/images/badges/master-challenge-blue.png", 
+        "compactIconSrc": "https://www.kastatic.org/images/badges/master-challenge-blue-60x60.png", 
+        "translatedDescription": "Challenge Patches are special awards for completing topic challenges.", 
+        "chartIconSrc": "https://www.kastatic.org/images/badges/master-challenge-blue-small-chart.png", 
+        "mediumIconSrc": "https://www.kastatic.org/images/badges/master-challenge-blue-medium.png", 
+        "CATEGORIES": [
+            0, 
+            1, 
+            2, 
+            3, 
+            4, 
+            5
+        ], 
+        "description": "Challenge Patches are special awards for completing topic challenges."
+    }
+]

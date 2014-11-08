@@ -28,8 +28,8 @@ module.exports = function(grunt) {
     },
 
     curl: {
-      'js/badges.json': 'https://www.khanacademy.org/api/v1/badges?casing=camel&format=pretty',
-      'js/categories.json': 'https://www.khanacademy.org/api/v1/badges/categories?casing=camel&format=pretty'
+      'public/js/badges.json': 'https://www.khanacademy.org/api/v1/badges?casing=camel&format=pretty',
+      'public/js/categories.json': 'https://www.khanacademy.org/api/v1/badges/categories?casing=camel&format=pretty'
     },
 
     watch: {
