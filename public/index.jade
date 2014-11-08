@@ -24,10 +24,11 @@ html
         .container.clearfix
           for category in categories
             .badge-category.clearfix
-              h1.badge-category__header
+              h3.align-top
                 //- TODO: Make image badge spritesheet
                 img.badge-category__icon(src=category.chartIconSrc, alt="#{category.typeLabel} icon")
                 | #{category.typeLabel}
+              p Hello World
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(src='js/main.js')

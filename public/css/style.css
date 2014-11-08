@@ -98,11 +98,12 @@ body {
     font-weight: bold;
 }
 
-/* Custom CSS */
-.badge-category__header {
-    font-weight: bold;
+/* OOCSS helpers */
+.align-top {
+    vertical-align: top;
 }
 
+/* Custom CSS */
 .badge-category__icon {
     float: left;
     /* TODO: Revisit this */
