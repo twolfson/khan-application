@@ -17,4 +17,4 @@ set -x
 #   However, I am more familiar with `bash` for variable passing at the moment
 # Run our release
 # TODO: Add foundry here
-./node_modules/.bin/buildbranch "gh-pages" "public"
+./node_modules/.bin/buildbranch "gh-pages" "dist"
