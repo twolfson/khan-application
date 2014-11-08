@@ -25,7 +25,9 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "grunt jshint"
+  },
   "dependencies": {},
   "devDependencies": {
     "buildbranch": "nfroidure/buildbranch#6160e64e884cabfb05c2f947543323f1c164134a",
