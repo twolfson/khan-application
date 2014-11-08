@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
-    "buildbranch": "0.0.1",
+    "buildbranch": "nfroidure/buildbranch#6160e64e884cabfb05c2f947543323f1c164134a",
     "foundry": "~3.0.0",
     "foundry-release-git": "~1.1.0",
     "foundry-release-npm": "~1.1.0",
