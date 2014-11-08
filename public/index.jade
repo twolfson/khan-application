@@ -1,0 +1,31 @@
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title Badge Explorer
+
+    //- Font Awesome used for the back/forward arrows
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='css/style.css')
+  body
+
+    #page-contents
+      .detail-view
+        .container.clearfix
+          .badge-switcher
+            a.badge-switch.badge-switch-left(href='#')
+              i.fa.fa-chevron-left
+            a.badge-switch.badge-switch-right(href='#')
+              i.fa.fa-chevron-right
+            //- `.full-badge` div added by JS on page load
+      .browse-view
+        .container.clearfix
+          p // TODO: Add full list of badges
+          p Ricotta smelly cheese cheeseburger. Cauliflower cheese melted cheese cheese and wine cheesy feet cow when the cheese comes out everybody"s happy croque monsieur hard cheese. Cheesecake swiss cheesy feet cheese and wine cheese slices camembert de normandie cheesecake stinking bishop. Gouda say cheese danish fontina danish fontina lancashire paneer roquefort swiss. Manchego mozzarella.
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='js/main.js')
+    script
+      BadgeExplorer.render();
