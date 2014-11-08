@@ -3,6 +3,22 @@ Application for Khan Academy
 
 http://twolfson.github.io/khan-application/
 
+**Plan:**
+
+- Implement basic with CSS sprites (because otherwise duplicate work)
+- Start on responsive
+- Use anchor for switching between pages
+    - This will play nicely with mobile users
+    - On mobile, display all content in scrollable format
+
+**Missing performance items:**
+- Minified HTML
+- Minified CSS
+- Crushed sprites
+- Separate spritesheets for sets of badges
+    - Load the first 2 immediately, then lazy load remaining sets in background
+- Use SVG over PNG for better scaling and smaller weight
+
 ## Getting Started
 Install the module with: `npm install khan-application`
 
@@ -12,9 +28,6 @@ khan_application.awesome(); // "awesome"
 ```
 
 ## Documentation
-_(Coming soon)_
-
-## Examples
 _(Coming soon)_
 
 ## Contributing
