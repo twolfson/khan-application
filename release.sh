@@ -14,5 +14,6 @@ fi
 set -x
 
 # DEV: We could use `npm-run-script` since as of 2.0, it supports variables
-#   However, I am more familiar with this at the moment
+#   However, I am more familiar with `bash` for variable passing at the moment
 # Run our release
+./node_modules/.bin/buildbranch
