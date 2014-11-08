@@ -12,6 +12,7 @@ http://twolfson.github.io/khan-application/
     - On mobile, display all content in scrollable format
 
 **Missing performance items:**
+
 - Minified HTML
 - Minified CSS
 - Optimized images
