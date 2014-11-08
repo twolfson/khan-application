@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    // Linting
     jshint: {
       files: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
       options: {
@@ -27,6 +28,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // External asset management
     'curl-dir': {
       json: {
         src: [
@@ -45,6 +47,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // Compiling and distribution
+    template: {
+      jade: {
+        files: [{
+          src: ['public/index.jade'],
+          dest: 'dist/index',
+          ext: '.html'
+        }]
+      }
+    },
+
+    // Development workflow
     watch: {
       'default': {
         files: '<%= jshint.files %>',
@@ -59,6 +73,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-templater');
 
   // Default task.
   grunt.registerTask('default', ['jshint']);
