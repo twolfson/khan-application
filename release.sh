@@ -13,6 +13,9 @@ fi
 # Echo commands
 set -x
 
+# Build the latest
+./node_modules/.bin/grunt build
+
 # DEV: We could use `npm-run-script` since as of 2.0, it supports variables
 #   However, I am more familiar with `bash` for variable passing at the moment
 # Run our release
