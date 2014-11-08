@@ -11,8 +11,12 @@ http://twolfson.github.io/khan-application/
     - This will play nicely with mobile users
     - On mobile, display all content in scrollable format
 
-**Missing performance items:**
+### Performance
+### Completed
+- Delivered JSON with JS
+    - No delay between page content and render waiting for external JS to download
 
+#### Missing
 - Minified HTML
 - Minified CSS
 - Optimized images
@@ -21,6 +25,14 @@ http://twolfson.github.io/khan-application/
 - Use SVG over PNG for better scaling and smaller weight
 - Move CDN URL's to `//` over `https://`
 - Concatenate CDN JS/CSS with local CSS and host on another CDN
+- Strip down JSON to what we need
+    - Smaller payload
+    - Can be achieved now that we deliver the JSON with JS
+
+**TODOs:**
+
+- Check inline TODOs
+- Relocate `.json` files to somewhere ideal (weird to load them for Jade from a `public/` directory
 
 ## Getting Started
 Install the module with: `npm install khan-application`
