@@ -25,13 +25,17 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {},
   "devDependencies": {
+    "buildbranch": "0.0.1",
+    "foundry": "~3.0.0",
+    "foundry-release-git": "~1.1.0",
+    "foundry-release-npm": "~1.1.0",
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.4.0"
   },
-  "keywords": []
+  "keywords": [],
+  "private": true
 }
