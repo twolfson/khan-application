@@ -23,10 +23,11 @@ html
       .browse-view
         .container.clearfix
           for category in categories
-            h3
-              img(src=category.iconSrc, alt="#{category.typeLabel} icon")
-            | #{category.typeLabel}
-            a e
+            .badge-category.clearfix
+              h1.badge-category__header
+                //- TODO: Make image badge spritesheet
+                img.badge-category__icon(src=category.chartIconSrc, alt="#{category.typeLabel} icon")
+                | #{category.typeLabel}
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(src='js/main.js')

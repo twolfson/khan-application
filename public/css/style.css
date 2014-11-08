@@ -97,3 +97,14 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+/* Custom CSS */
+.badge-category__header {
+    font-weight: bold;
+}
+
+.badge-category__icon {
+    float: left;
+    /* TODO: Revisit this */
+    margin-right: 4px;
+}
