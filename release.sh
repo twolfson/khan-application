@@ -10,14 +10,14 @@ if test "$semver" = ""; then
   exit 1
 fi
 
-# Echo commands
-set -x
-
 # If we are on a dirty branch, stop
 if test "$(git status --porcelain 2> /dev/null)" != ""; then
   echo "Current branch is dirty. Please stash or commit changes." 1>&2
   exit 1
 fi
+
+# Echo commands
+set -x
 
 # Build the latest (seems to dissapear when we use `buildbranch`)
 ./node_modules/.bin/grunt build
