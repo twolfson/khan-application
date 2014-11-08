@@ -52,9 +52,9 @@ module.exports = function(grunt) {
       jade: {
         files: [{
           src: ['public/index.jade'],
-          dest: 'dist/index',
-          ext: '.html'
-        }]
+          dest: 'dist/index.html'
+        }],
+        variables: {}
       }
     },
 
