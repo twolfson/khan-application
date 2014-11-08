@@ -22,13 +22,21 @@ html
             //- `.full-badge` div added by JS on page load
       .browse-view
         .container.clearfix
+          //- Render each category section
           for category in categories
             .badge-category.clearfix
               h3.align-top
                 //- TODO: Make image badge spritesheet
+                //- TODO: Crop badge as its too tall
                 img.badge-category__icon(src=category.chartIconSrc, alt="#{category.typeLabel} icon")
                 | #{category.typeLabel}
-              p Hello World
+              div
+                //- Render each badge
+                for badge in badges
+                  //- If the badge is in this section, display it
+                  if badge.badgeCategory === category.category
+                    img(src=badge.icons.small, alt="#{badge.description} badge}")
+
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script(src='js/main.js')

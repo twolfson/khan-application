@@ -99,6 +99,7 @@ body {
 }
 
 /* OOCSS helpers */
+/* TODO: I don't belive this is being visually used */
 .align-top {
     vertical-align: top;
 }
