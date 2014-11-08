@@ -53,6 +53,8 @@ module.exports = function(grunt) {
     }
   });
 
+  // TODO: Define custom task to download our images
+
   // Load in grunt tasks
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
