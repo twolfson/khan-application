@@ -48,11 +48,14 @@ module.exports = function(grunt) {
 
     // Compiling and distribution
     copy: {
-      'public': [{
-        expand: true,
-        src: 'public/{css,js}/*',
-        dest: 'dest/'
-      }]
+      'public': {
+        files: [{
+          expand: true,
+          cwd: 'public/',
+          src: ['css/*', 'js/*'],
+          dest: 'dist/'
+        }]
+      }
     },
     template: {
       jade: {
@@ -83,7 +86,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-templater');
 
   // Define our tasks
-  grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('build', ['copy', 'template']);
+  grunt.registerTask('lint', ['jshint']);
+
   grunt.registerTask('default', ['lint']);
 };
