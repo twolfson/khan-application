@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
-
-  // Project configuration.
+  // Configure grunt
   grunt.initConfig({
     // Linting
     jshint: {
@@ -83,7 +82,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-templater');
 
-  // Default task.
-  grunt.registerTask('default', ['jshint']);
-
+  // Define our tasks
+  grunt.registerTask('lint', ['jshint']);
+  grunt.registerTask('build', ['copy', 'template']);
+  grunt.registerTask('default', ['lint']);
 };
