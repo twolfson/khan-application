@@ -27,9 +27,22 @@ module.exports = function(grunt) {
       }
     },
 
-    curl: {
-      'public/js/badges.json': 'https://www.khanacademy.org/api/v1/badges?casing=camel&format=pretty',
-      'public/js/categories.json': 'https://www.khanacademy.org/api/v1/badges/categories?casing=camel&format=pretty'
+    'curl-dir': {
+      json: {
+        src: [
+          'https://www.khanacademy.org/api/v1/badges?casing=camel&format=pretty',
+          'https://www.khanacademy.org/api/v1/badges/categories?casing=camel&format=pretty'
+        ],
+        dest: 'public/js/',
+        router: function (url) {
+          // Map `badges` to `badges.json` and `badges/categories` to `categories.json`
+          if (url.indexOf('badges/categories') !== -1) {
+            return 'categories.json';
+          } else {
+            return 'badges.json';
+          }
+        }
+      }
     },
 
     watch: {
