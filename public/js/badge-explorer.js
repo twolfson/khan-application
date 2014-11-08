@@ -4,7 +4,7 @@ function BadgeExplorer(doc) {
     this.$switcher = $('.badge-switcher');
 }
 BadgeExplorer.prototype = {
-    switchTo: function (badge) {
+    render: function (badge) {
         var $badge = $(
             '<div class="full-badge clearfix">' +
                 '<div class="full-badge-icon">' +
@@ -19,7 +19,7 @@ BadgeExplorer.prototype = {
         $badge.find('.full-badge-title').text(badge.description);
         $badge.find('.full-badge-description').text(badge.safeExtendedDescription);
 
-        $el.append($badge);
+        this.$switcher.append($badge);
     }
 };
 

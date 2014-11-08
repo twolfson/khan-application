@@ -57,8 +57,16 @@ module.exports = function(grunt) {
         }]
       }
     },
+    browserify: {
+      'public': {
+        files: [{
+          src: 'public/js/main.js',
+          dest: 'dist/js/main.js'
+        }]
+      }
+    },
     template: {
-      jade: {
+      'public': {
         files: [{
           src: ['public/index.jade'],
           dest: 'dist/index.html'
@@ -79,6 +87,7 @@ module.exports = function(grunt) {
   // TODO: Define custom task to download our images
 
   // Load in grunt tasks
+  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -86,7 +95,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-templater');
 
   // Define our tasks
-  grunt.registerTask('build', ['copy', 'template']);
+  grunt.registerTask('build', ['copy', 'browserify', 'template']);
   grunt.registerTask('lint', ['jshint']);
 
   grunt.registerTask('default', ['lint']);
