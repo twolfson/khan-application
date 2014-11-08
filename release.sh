@@ -18,3 +18,8 @@ set -x
 # Run our release
 # TODO: Add foundry here
 ./node_modules/.bin/buildbranch "gh-pages" "dist"
+
+# Open GitHub pages to verify
+url="http://twolfson.github.io/khan-application/"
+echo "Opening $url"
+./node_modules/.bin/opener "$url"
