@@ -23,7 +23,9 @@ html
       .browse-view
         .container.clearfix
           for category in categories
-            p= category.typeLabel
+            h3
+              img(src=category.iconSrc, alt="#{category.typeLabel} icon")
+            | #{category.typeLabel}
             a e
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
