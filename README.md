@@ -20,6 +20,7 @@ http://twolfson.github.io/khan-application/
     - Load the first 2 immediately, then lazy load remaining sets in background
 - Use SVG over PNG for better scaling and smaller weight
 - Move CDN URL's to `//` over `https://`
+- Concatenate CDN JS/CSS with local CSS and host on another CDN
 
 ## Getting Started
 Install the module with: `npm install khan-application`
