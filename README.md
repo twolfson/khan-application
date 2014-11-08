@@ -1,6 +1,8 @@
 # khan-application
 Application for Khan Academy
 
+http://twolfson.github.io/khan-application/
+
 ## Getting Started
 Install the module with: `npm install khan-application`
 
