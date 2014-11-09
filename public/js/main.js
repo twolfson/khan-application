@@ -3,24 +3,15 @@ var BadgeExplorer = require('./badge-explorer');
 var badges = require('./badges.json');
 var categories = require('./categories.json');
 
+// Generate container for badge explorer
+var $detailView = $(
+     '<div class="detail-view"><div class="container clearfix">' +
+         '<div class="badge-switcher">' +
+         '</div>' +
+     '</div></div>');
+
 // Initialize our badge explorer against the body and render the virus badge
-var explorer = new BadgeExplorer($('.badge-switcher'));
-var $prevBadge = $('.badge-switch-left');
-var $nextBadge = $('.badge-switch-right');
-
-// When we are rendering a new badge
-function renderBadge(index) {
-    // Update the displayed badge
-    var badge = badges[index];
-    explorer.render(badge);
-
-    // Update the arrows to match previous and next
-    // DEV: Since we have stable sorted we can directly access the previous/next
-    var prevBadge = badges[index - 1] || badges[badges.length - 1];
-    var nextBadge = badges[index + 1] || badges[0];
-    $prevBadge.attr('href', '#' + prevBadge.slug);
-    $nextBadge.attr('href', '#' + nextBadge.slug);
-}
+var explorer = new BadgeExplorer($detailView.find('.badge-switcher'));
 
 // Define helper to render a badge for a slug
 function renderCurrentBadge() {
@@ -41,7 +32,7 @@ function renderCurrentBadge() {
 
     // If we have a match, update the explorer
     if (matchingBadgeIndex !== null) {
-        renderBadge(i);
+        explorer.renderBadgeByIndex(i);
     }
 
     // Return the result
@@ -56,7 +47,7 @@ function renderCurrentBadge() {
     // If there is none, render the first badge
     // DEV: We have stable sorted the badges into categories for easy lookups like this
     if (_badge === null) {
-        renderBadge(0);
+        explorer.renderBadgeByIndex(0);
     }
 }());
 

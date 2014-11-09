@@ -12,14 +12,8 @@ html
   body
 
     #page-contents
-      .detail-view
-        .container.clearfix
-          .badge-switcher
-            a.badge-switch.badge-switch-left(href='#')
-              i.fa.fa-chevron-left
-            a.badge-switch.badge-switch-right(href='#')
-              i.fa.fa-chevron-right
-            //- `.full-badge` div added by JS on page load
+      //- `.full-badge` div added by JS on page load
+      //- We have relocted this entire section into JS to avoid strange appearances if JS is disabled
       .browse-view
         .container.clearfix
           //- Render each category section
