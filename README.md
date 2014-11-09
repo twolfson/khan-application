@@ -3,6 +3,8 @@ Application for Khan Academy
 
 http://twolfson.github.io/khan-application/
 
+![Screenshot](docs/screenshot.png)
+
 ## Getting started
 To set up the project locally, run the following steps:
 
@@ -84,6 +86,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 
 ### TODOs
 - Check inline TODOs
+- If we take care of padding, then screenshot again
 
 ## Getting Started
 Install the module with: `npm install khan-application`
