@@ -1,2 +1,4 @@
 # khan-application changelog
+1.1.0 - Relocated arrows and badge handling into `badge-explorer`
+
 1.0.0 - Initial release
