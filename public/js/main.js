@@ -13,7 +13,7 @@ function renderCurrentBadge() {
     var matchingBadge = null;
     var i = 0;
     var len = badges.length;
-    var slug = window.hash.slice(1);
+    var slug = window.location.hash.slice(1);
     for (; i < len; i++) {
         // If the badge's slug matches our slug, save it and stop
         var badge = badges[i];
