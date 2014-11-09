@@ -31,7 +31,8 @@ function renderCurrentBadge() {
     if (badge === null) {
         badge = badges[0];
         explorer.renderBadgeByIndex(0);
-
+    // Otherwise, scroll to the badge
+    } else {
         // Find the badge by its id
         var badgeEl = document.getElementById('badge-' + badge.slug);
         if (badgeEl) {
