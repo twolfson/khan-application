@@ -3,34 +3,60 @@ Application for Khan Academy
 
 http://twolfson.github.io/khan-application/
 
-### Plan
-- Implement basic with CSS sprites (because otherwise duplicate work)
-- Start on responsive
-- Use anchor for switching between pages
-    - This will play nicely with mobile users
-    - On mobile, display all content in scrollable format
+### Problems encountered
+#### Anchors
+Originally planned to use `anchors` for persisting location between pages. After playing with them, I realized I had to implement a different solution because clicking and the page jumping is not ideal.
+
+### Architecture
+#### Completed
+- Badge explorer is standalone and can be unit tested
+- Implemented reproducable build chain
+
+#### Missing
+- JS tests
+- Visual regression tests
+    - Open PhantomJS to a page, screenshot, click on a badge, screenshot, compare screenshots with expected results
+    - http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
 
 ### Performance
 #### Completed
 - Delivered JSON with JS
     - No delay between page content and render waiting for external JS to download
+- Minified HTML (automatically thanks to Jade)
+- Stable sorted JSON data to make lookups for previous/next badges `O(1)`
 
 #### Missing
-- Minified HTML
+- Minify JS
+  - Use a grunt plugin that leverages `uglifyjs2`
 - Minified CSS
+  - Use a `grunt` plugin for consistency
+- Move all *small* badges into a spritesheet
+  - Do not use the large ones because they are displayed one at a time and would waste unnecessary bandwidth
 - Optimized images
+  - Use `grunt-imagemin`
 - Separate spritesheets for sets of badges
     - Load the first 2 immediately, then lazy load remaining sets in background
 - Use SVG over PNG for better scaling and smaller weight
 - Move CDN URL's to `//` over `https://`
+  - TODO: Take care of ^^
 - Concatenate CDN JS/CSS with local CSS and host on another CDN
-- Strip down JSON to what we need
+- Strip down JSON to what we need (e.g. delete most properties)
     - Smaller payload
     - Can be achieved now that we deliver the JSON with JS
 
+### Design
+#### Completed
+- Implemented large display at top
+- Added previous/next functionality
+- Scroll to linked badge at start
+
+#### Missing
+- Responsive layout
+    - TODO: Screenshot current example
+- Highlight selected element
+
 ### TODOs
 - Check inline TODOs
-- Relocate `.json` files to somewhere ideal (weird to load them for Jade from a `public/` directory
 
 ## Getting Started
 Install the module with: `npm install khan-application`
