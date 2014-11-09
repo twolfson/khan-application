@@ -21,6 +21,7 @@ BadgeExplorer.prototype = {
     render: function (badge) {
         // DEV: Since the image could take a bit of time to load, set it to nothing (otherwise, we will have lag between content pieces)
         // DEV: We don't want to use a spritesheet because that would be *really* big and defeat the purpose
+        // TODO: We could lazy load large images from the current set but that is killing bandwidth
         this.$badge.find('.full-badge-icon img').attr('src', null);
         this.$badge.find('.full-badge-icon img').attr('src', badge.icons.large);
         this.$badge.find('.full-badge-title').text(badge.description);
