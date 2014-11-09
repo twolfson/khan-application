@@ -116,17 +116,36 @@ body {
     display: none;
 }
 
-.flexbox {
-    display: table;
+/**
+* Nasty hack to circumvent Modernizr conflicts.
+*/
+.flexbox{
+    display:table;
+    width:100%;
 }
 
-.flexbox__cell {
-    display: table-cell;
+/**
+ * Nasty hack to circumvent Modernizr conflicts.
+ */
+html.flexbox{
+    display:block;
+    width:auto;
+}
+
+    .flexbox__item{
+        display:table-cell;
+        vertical-align:middle;
+    }
+
+.tmp2 {
+    padding-left: 10px;
+    vertical-align: top;
 }
 
 .badge {
     display: block;
     clear: both;
+    margin-bottom: 20px;
 }
 
 /*.badge img {
