@@ -133,6 +133,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Add padding to badges
     - TODO: Do this ^^
     - If we take care of padding, then screenshot again
+- Crop category badge image because it is too tall
 
 ### TODOs
 - Check inline TODOs
