@@ -1,4 +1,6 @@
 # khan-application changelog
+1.5.0 - Took care of quick/low hanging fruit
+
 1.4.0 - Added documentation
 
 1.3.1 - Fixed up invalid logic
