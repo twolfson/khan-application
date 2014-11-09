@@ -25,7 +25,7 @@ set -x
 # DEV: We could use `npm-run-script` since as of 2.0, it supports variables
 #   However, I am more familiar with `bash` for variable passing at the moment
 # Run our release
-# TODO: Add foundry here
+./node_modules/.bin/foundry release "$semver"
 ./node_modules/.bin/buildbranch "gh-pages" "dist"
 
 # Open GitHub pages to verify
