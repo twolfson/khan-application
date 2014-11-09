@@ -1,4 +1,6 @@
 # khan-application changelog
+1.3.1 - Fixed up invalid logic
+
 1.3.0 - Moved scrolling to only occur when a badge was linked
 
 1.2.0 - Added fixed header and scrolling to icon on load
