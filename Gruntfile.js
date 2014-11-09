@@ -1,3 +1,7 @@
+// Load in dependencies
+var stable = require('stable');
+
+// Setup grunt
 module.exports = function(grunt) {
   // Configure grunt
   grunt.initConfig({
@@ -99,8 +103,13 @@ module.exports = function(grunt) {
   // TODO: Define custom task to download our images
 
   // Define a custom task to stable sort our badges and add `prev/next` slug references
-  grunt.defineTask('customize-badges', function () {
-
+  grunt.registerTask('customize-badges', function () {
+    var badges = require('./tmp-setup/js/badges.json');
+    sortedBadges = stable(badges, function sortByCategory (a, b) {
+      return a.badgeCategory - b.badgeCategory;
+    });
+    grunt.file.write('./public/js/badges.json', JSON.stringify(sortedBadges, null, 4));
+    grunt.log.write('Customized `badges.json`');
   });
 
   // Load in grunt tasks
