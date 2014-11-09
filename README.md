@@ -98,6 +98,9 @@ Originally planned to use `anchors` for persisting location between pages. After
     - No delay between page content and render waiting for external JS to download
 - Minified HTML (automatically thanks to Jade)
 - Stable sorted JSON data to make lookups for previous/next badges `O(1)`
+- Moved CDN URL's from `https://` to  `//`
+    - Uses same protocol as the current page
+    - Removes HTTPS overhead
 
 #### Missing
 - Minify JS
@@ -111,8 +114,6 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Separate spritesheets for sets of badges
     - Load the first 2 immediately, then lazy load remaining sets in background
 - Use SVG over PNG for better scaling and smaller weight
-- Move CDN URL's to `//` over `https://`
-  - TODO: Take care of ^^
 - Concatenate CDN JS/CSS with local CSS and host on another CDN
 - Upload images to CDN
 - Strip down JSON to what we need (e.g. delete most properties)
@@ -129,6 +130,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 #### Missing
 - Responsive layout
     - TODO: Screenshot current example
+    - TODO: Take care of this ^^
 - Highlight selected element
     - There will be issus with hexagonal badges unless we find another way to indicate focus
 - Consider doing a hover effect for each badge
