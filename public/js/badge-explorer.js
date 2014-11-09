@@ -36,6 +36,7 @@ BadgeExplorer.prototype = {
         // TODO: Consider using a map for faster lookups `O(1)` (e.g. `badges['fact-checker']`)
         var i = 0;
         var len = this.badges.length;
+        var matchingBadgeIndex;
         for (; i < len; i++) {
             // If the badge's slug matches our slug, save it and stop
             var badge = this.badges[i];
@@ -60,7 +61,8 @@ BadgeExplorer.prototype = {
     // On a render call, update the content
     render: function (index) {
         // If the badge doesn't exist at the index, return `null`
-        var badge = this.badges[index];
+        var badges = this.badges;
+        var badge = badges[index];
         if (badge === undefined) {
             return null;
         }

@@ -9,6 +9,7 @@ var $detailView = $(
          '<div class="badge-switcher">' +
          '</div>' +
      '</div></div>');
+$('#page-contents').prepend($detailView);
 
 // Initialize our badge explorer against the body and render the virus badge
 var explorer = new BadgeExplorer($detailView.find('.badge-switcher'), badges);
