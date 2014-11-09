@@ -31,15 +31,16 @@ function renderCurrentBadge() {
     if (badge === null) {
         badge = badges[0];
         explorer.renderBadgeByIndex(0);
-    }
-
-    // Find the badge by its id
-    var badgeEl = document.getElementById('badge-' + badge.slug);
-    if (badgeEl) {
-        // DEV: Use an offset to account for placeholder
-        // TODO: In a responsive setting, detect media or placeholder height
-        var elTop = $(badgeEl).offset().top;
-        window.scrollTo(0, elTop - 355);
+    // Otherwise, scroll to the badge
+    } else {
+        // Find the badge by its id
+        var badgeEl = document.getElementById('badge-' + badge.slug);
+        if (badgeEl) {
+            // DEV: Use an offset to account for placeholder
+            // TODO: In a responsive setting, detect media or placeholder height
+            var elTop = $(badgeEl).offset().top;
+            window.scrollTo(0, elTop - 355);
+        }
     }
 }());
 
