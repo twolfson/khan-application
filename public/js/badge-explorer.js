@@ -19,8 +19,9 @@ function BadgeExplorer(container) {
 BadgeExplorer.prototype = {
     // On a render call, update the content
     render: function (badge) {
-        // DEV: Since the image could take a bit of time to load, set it to something else
+        // DEV: Since the image could take a bit of time to load, set it to nothing (otherwise, we will have lag between content pieces)
         // DEV: We don't want to use a spritesheet because that would be *really* big and defeat the purpose
+        this.$badge.find('.full-badge-icon img').attr('src', null);
         this.$badge.find('.full-badge-icon img').attr('src', badge.icons.large);
         this.$badge.find('.full-badge-title').text(badge.description);
         this.$badge.find('.full-badge-description').text(badge.safeExtendedDescription);
