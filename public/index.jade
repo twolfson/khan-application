@@ -29,15 +29,16 @@ html
                 for badge in badges
                   //- If the badge is in this section, display it
                   if badge.badgeCategory === category.category
-                    .flexbox.badge
-                      a(href="##{badge.slug}").flexbox__cell
-                        //- TODO: Add padding between badges
-                        //- TODO: Add `.selected` highlighting
-                        //- TODO: Consider doing an effect on hover
-                        img(src=badge.icons.compact, alt="#{badge.description} badge")
-                      .flexbox__cell
-                        h3= badge.description
-                        p= badge.safeExtendedDescription
+                    a(name=badge.slug, href="##{badge.slug}").flexbox__cell
+                      //- TODO: Add padding between badges
+                      //- TODO: Add `.selected` highlighting
+                      //- TODO: Consider doing an effect on hover
+                      img(src=badge.icons.compact, alt="#{badge.description} badge")
+                    //- .flexbox
+                      //- .flexbox__cell
+                      //-   p
+                      //-     strong= badge.description
+                      //-   p= badge.safeExtendedDescription
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')

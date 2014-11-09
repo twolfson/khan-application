@@ -112,7 +112,7 @@ body {
 }
 
 /* TODO: Place inside a media query */
-.detail-view {
+/*.detail-view {
     display: none;
 }
 
@@ -122,14 +122,5 @@ body {
 
 .flexbox__cell {
     display: table-cell;
-}
-
-.badge {
-    display: block;
-    clear: both;
-}
-
-/*.badge img {
-    float: left;
 }
 */
