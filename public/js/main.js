@@ -24,12 +24,22 @@ function renderCurrentBadge() {
 // DEV: Use a closure to prevent conflict with `hashchange` listener
 (function renderFirstBadge () {
     // Use the current badge from the URL
-    var _badge = renderCurrentBadge();
+    var badge = renderCurrentBadge();
 
     // If there is none, render the first badge
     // DEV: We have stable sorted the badges into categories for easy lookups like this
-    if (_badge === null) {
+    if (badge === null) {
+        badge = badges[0];
         explorer.renderBadgeByIndex(0);
+    }
+
+    // Find the badge by its id
+    var badgeEl = document.getElementById('badge-' + badge.slug);
+    if (badgeEl) {
+        // DEV: Use an offset to account for placeholder
+        // TODO: In a responsive setting, detect media or placeholder height
+        var elTop = $(badgeEl).offset().top;
+        window.scrollTo(0, elTop - 355);
     }
 }());
 
