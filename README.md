@@ -35,6 +35,47 @@ A local development server should be running at [http://localhost:3000/][].
 
 [http://localhost:3000/]: http://localhost:3000/
 
+## Documentation
+### Filesystem
+The repositories filesystem is laid out as follows:
+
+- `design-assets/` - Original mockups from the prompt
+- `dist/` - Folder with compiled assets
+- `docs/` - Folder for documentation related items (e.g. screenshots)
+- `public/` - Folder with CSS, JS, and Jade
+- `Gruntfile.js` - Configuration for `grunt`
+- `release.sh` - Script that recompiles assets, creates/tags a semver'd commit, and publishes to `gh-pages`
+
+### Development
+We leverage `grunt` to handle downloading and compiling our assets. To run the build chain, use:
+
+```bash
+npm run build
+```
+
+Compiled assets can be viewed locally via `serve`.
+
+```bash
+npm run serve
+```
+
+A local development server should be running at [http://localhost:3000/][].
+
+[http://localhost:3000/]: http://localhost:3000/
+
+### Releasing
+We use [`foundry`][] and [`buildbranch`][] to handle versioning and releasing.
+
+`foundry` takes care of `git commit`, `git tag`, `package.json`, and pushing `commits` and `tags`.
+
+`buildbranch` publishes the `dist/` (compiled via `npm run build`) to the `gh-pages` branch and pushes.
+
+[`foundry`]: https://github.com/twolfson/foundry
+[`buildbranch`]: https://github.com/nfroidure/buildbranch
+
+## Brain dump
+These are all the items occurred, I completed, and I wanted to complete during the exercise.
+
 ### Problems encountered
 #### Anchors
 Originally planned to use `anchors` for persisting location between pages. After playing with them, I realized I had to implement a different solution because clicking and the page jumping is not ideal.
@@ -46,6 +87,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 
 #### Missing
 - JS tests
+    - Use `karma` to load `badge-explorer` and test it
 - Visual regression tests
     - Open PhantomJS to a page, screenshot, click on a badge, screenshot, compare screenshots with expected results
     - http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
@@ -91,17 +133,6 @@ Originally planned to use `anchors` for persisting location between pages. After
 ### TODOs
 - Check inline TODOs
 - If we take care of padding, then screenshot again
-
-## Getting Started
-Install the module with: `npm install khan-application`
-
-```js
-var khan_application = require('khan-application');
-khan_application.awesome(); // "awesome"
-```
-
-## Documentation
-_(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt).
