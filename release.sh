@@ -11,7 +11,7 @@ if test "$semver" = ""; then
 fi
 
 # If we are on a dirty branch, stop
-if test "$(git status --porcelain 2> /dev/null)" != ""; then
+if test "$(git status --porcelain | grep --invert-match CHANGELOG.md 2> /dev/null)" != ""; then
   echo "Current branch is dirty. Please stash or commit changes." 1>&2
   exit 1
 fi
