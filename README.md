@@ -3,6 +3,32 @@ Application for Khan Academy
 
 http://twolfson.github.io/khan-application/
 
+## Getting started
+To set up the project locally, run the following steps:
+
+```bash
+# Clone the repository
+git clone https://github.com/twolfson/khan-application
+cd khan-application
+
+# Install development dependencies
+npm install
+
+# Build our HTML, CSS, and JS
+npm run build
+# Running "copy:public" (copy) task
+# ...
+# Done, without errors.
+
+# Host the application locally
+npm run serve
+# serving /home/todd/github/khan-application/dist on por
+```
+
+A local development server should be running at [http://localhost:3000/][].
+
+[http://localhost:3000/]: http://localhost:3000/
+
 ### Problems encountered
 #### Anchors
 Originally planned to use `anchors` for persisting location between pages. After playing with them, I realized I had to implement a different solution because clicking and the page jumping is not ideal.

@@ -26,6 +26,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "build": "grunt build",
     "serve": "serve dist/",
     "test": "grunt jshint"
   },
