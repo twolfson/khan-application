@@ -109,7 +109,8 @@ body {
 
 /* Custom CSS */
 .badge-link {
-    margin: 0 0 4px 4px;
+    display: inline-block;
+    margin: 0 26px 22px 0;
 }
 
 .badge-category__icon {
