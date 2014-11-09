@@ -26,19 +26,10 @@ body {
 
 /* PAGE COMPONENTS */
 
-/* TODO: Use SCSS and calculate this */
-/* .details-view padding + .full-badge padding + image height
-/* (40px + 30px) * 2 + 160px */
-.detail-view-placeholder {
-    height: 300px;
-}
-
 .detail-view {
     background: #f7f7f7;
     border-bottom: 1px solid #ccc;
     padding: 40px 0;
-    position: fixed;
-    width: 100%;
 }
 
 .browse-view {
@@ -119,3 +110,26 @@ body {
     /* TODO: Revisit this */
     margin-right: 4px;
 }
+
+/* TODO: Place inside a media query */
+.detail-view {
+    display: none;
+}
+
+.flexbox {
+    display: table;
+}
+
+.flexbox__cell {
+    display: table-cell;
+}
+
+.badge {
+    display: block;
+    clear: both;
+}
+
+/*.badge img {
+    float: left;
+}
+*/

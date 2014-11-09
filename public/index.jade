@@ -13,13 +13,13 @@ html
 
     #page-contents
       //- `.full-badge` div added by JS on page load
-      //- We have relocted this entire section into JS to maintain all of its controls there
+      //- We have relocted this entire section into JS to avoid strange appearances if JS is disabled
       .browse-view
         .container.clearfix
           //- Render each category section
           for category in categories
             .badge-category.clearfix
-              h3.align-top.clearfix
+              h2.align-top.clearfix
                 //- TODO: Make image badge spritesheet
                 //- TODO: Crop badge as its too tall
                 img.badge-category__icon(src=category.chartIconSrc, alt="#{category.typeLabel} icon")
@@ -29,16 +29,15 @@ html
                 for badge in badges
                   //- If the badge is in this section, display it
                   if badge.badgeCategory === category.category
-                    //- DEV: We can enable this to support linking when JS is disabled
-                    //-   It is disabled because I didn't have time to test to with all browsers
-                    //-   Although, it definitely works in FF =)
-                    //- noscript
-                    //-   a(name=badge.slug)
-                    a(id="badge-#{badge.slug}", href="##{badge.slug}")
-                      //- TODO: Add padding between badges
-                      //- TODO: Add `.selected` highlighting
-                      //- TODO: Consider doing an effect on hover
-                      img(src=badge.icons.compact, alt="#{badge.description} badge")
+                    .flexbox.badge
+                      a(href="##{badge.slug}").flexbox__cell
+                        //- TODO: Add padding between badges
+                        //- TODO: Add `.selected` highlighting
+                        //- TODO: Consider doing an effect on hover
+                        img(src=badge.icons.compact, alt="#{badge.description} badge")
+                      .flexbox__cell
+                        h3= badge.description
+                        p= badge.safeExtendedDescription
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
