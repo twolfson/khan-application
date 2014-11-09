@@ -108,6 +108,10 @@ body {
 }
 
 /* Custom CSS */
+.badge-link {
+    margin: 0 0 4px 4px;
+}
+
 .badge-category__icon {
     float: left;
     margin-right: 4px;

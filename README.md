@@ -91,6 +91,8 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Visual regression tests
     - Open PhantomJS to a page, screenshot, click on a badge, screenshot, compare screenshots with expected results
     - http://twolfson.com/2014-02-25-visual-regression-testing-in-travis-ci
+- Move all CSS to use OOCSS
+    - Less content semantic and more presentation semantic
 
 ### Performance
 #### Completed
@@ -136,7 +138,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Consider doing a hover effect for each badge
 - Add padding to badges
     - TODO: Do this ^^
-    - If we take care of padding, then screenshot again
+    - If we take care of padding, then screenshot again ^^
 - Crop category badge image because it is too tall
 
 ### TODOs
