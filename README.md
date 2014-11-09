@@ -54,6 +54,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Responsive layout
     - TODO: Screenshot current example
 - Highlight selected element
+    - There will be issus with hexagonal badges unless we find another way to indicate focus
 
 ### TODOs
 - Check inline TODOs
