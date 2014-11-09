@@ -28,7 +28,9 @@
   "scripts": {
     "test": "grunt jshint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery-smooth-scroll": "~1.5.3"
+  },
   "devDependencies": {
     "buildbranch": "nfroidure/buildbranch#6160e64e884cabfb05c2f947543323f1c164134a",
     "foundry": "~3.0.0",

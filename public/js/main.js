@@ -1,4 +1,6 @@
 // Load in dependencies
+var $ = window.$;
+var jQuerySmoothScroll = require('jquer-smooth-scroll');
 var BadgeExplorer = require('./badge-explorer');
 var badges = require('./badges.json');
 
@@ -14,6 +16,21 @@ $('#page-contents').prepend($detailView);
 
 // Initialize our badge explorer against the body and render the virus badge
 var explorer = new BadgeExplorer($detailView.find('.badge-switcher'), badges);
+
+// TODO: Consider building a component for smooth scrolling
+// TODO: Would have liked to use `EventEmitter` but didn't trust its size
+function scrollToBadge(badge) {
+    // If there is a badge, scroll to it
+    if (badge) {
+        var $badge = $('#badge-' + badge.slug);
+        if ($badge) {
+            $badge.smoothScroll({offset: 300});
+        }
+    }
+
+    // Return our badge
+    return badge;
+}
 
 // Define helper to render a badge for the hash (e.g. `#fact-checker` -> `fact-checker`)
 function renderCurrentBadge() {
