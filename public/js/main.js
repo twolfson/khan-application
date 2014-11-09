@@ -4,7 +4,7 @@ var badges = require('./badges.json');
 var categories = require('./categories.json');
 
 // Initialize our badge explorer against the body and render the virus badge
-var explorer = new BadgeExplorer(document.body);
+var explorer = new BadgeExplorer($('.badge-switcher'));
 
 // Define helper to render a badge for a slug
 function renderCurrentBadge() {

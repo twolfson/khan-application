@@ -1,10 +1,10 @@
 // Define our badge explorer component
 // TODO: Should we require a `badge` on initialization?
-function BadgeExplorer(doc) {
+function BadgeExplorer(container) {
     // Find and save the badge switcher
-    this.$switcher = $('.badge-switcher');
+    this.$switcher = $(container);
 
-    // Generate our content and append it to the DOM
+    // Generate our content, append them together, and add to our container
     this.$badge = $(
         '<div class="full-badge clearfix">' +
             '<div class="full-badge-icon">' +
