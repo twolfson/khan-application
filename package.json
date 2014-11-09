@@ -26,6 +26,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "serve": "serve dist/",
     "test": "grunt jshint"
   },
   "dependencies": {},
@@ -44,6 +45,7 @@
     "grunt-templater": "0.0.6",
     "jade": "~1.7.0",
     "opener": "~1.4.0",
+    "serve": "~1.4.0",
     "stable": "~0.1.5"
   },
   "keywords": [],
