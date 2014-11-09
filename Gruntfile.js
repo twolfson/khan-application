@@ -100,8 +100,6 @@ module.exports = function(grunt) {
     }
   });
 
-  // TODO: Define custom task to download our images
-
   // Define a custom task to stable sort our badges and add `prev/next` slug references
   grunt.registerTask('customize-badges', function () {
     var badges = require('./tmp-setup/js/badges.json');

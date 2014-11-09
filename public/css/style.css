@@ -107,15 +107,8 @@ body {
     font-weight: bold;
 }
 
-/* OOCSS helpers */
-/* TODO: I don't belive this is being visually used */
-.align-top {
-    vertical-align: top;
-}
-
 /* Custom CSS */
 .badge-category__icon {
     float: left;
-    /* TODO: Revisit this */
     margin-right: 4px;
 }
