@@ -110,17 +110,3 @@ body {
     /* TODO: Revisit this */
     margin-right: 4px;
 }
-
-/* TODO: Place inside a media query */
-/*.detail-view {
-    display: none;
-}
-
-.flexbox {
-    display: table;
-}
-
-.flexbox__cell {
-    display: table-cell;
-}
-*/
