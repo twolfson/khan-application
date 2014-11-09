@@ -114,6 +114,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Move CDN URL's to `//` over `https://`
   - TODO: Take care of ^^
 - Concatenate CDN JS/CSS with local CSS and host on another CDN
+- Upload images to CDN
 - Strip down JSON to what we need (e.g. delete most properties)
     - Smaller payload
     - Can be achieved now that we deliver the JSON with JS
