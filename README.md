@@ -136,9 +136,6 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Highlight selected element
     - There will be issus with hexagonal badges unless we find another way to indicate focus
 - Consider doing a hover effect for each badge
-- Add padding to badges
-    - TODO: Do this ^^
-    - If we take care of padding, then screenshot again ^^
 - Crop category badge image because it is too tall
 
 ### TODOs
