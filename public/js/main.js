@@ -45,21 +45,10 @@ function renderCurrentBadge() {
     // Use the current badge from the URL
     var _badge = renderCurrentBadge();
 
-    // If there is none
+    // If there is none, render the first badge
+    // DEV: We have stable sorted the badges into categories for easy lookups like this
     if (_badge === null) {
-        // DEV: We could query the DOM but that would be sloooow
-        // Find the first badge and render it
-        // TODO: Pre-emptively stable sort badges by category
-        var badge;
-        var i = 0;
-        var len = badges.length;
-        for (; i < len; i++) {
-            badge = badges[i];
-            if (badge.badgeCategory === categories[0].category) {
-                break;
-            }
-        }
-        renderBadge(badge);
+        renderBadge(badges[0]);
     }
 }());
 
