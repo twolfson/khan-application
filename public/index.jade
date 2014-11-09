@@ -19,7 +19,7 @@ html
           //- Render each category section
           for category in categories
             .badge-category.clearfix
-              h3.align-top.clearfix
+              h2.align-top.clearfix
                 //- TODO: Make image badge spritesheet
                 //- TODO: Crop badge as its too tall
                 img.badge-category__icon(src=category.chartIconSrc, alt="#{category.typeLabel} icon")
@@ -29,11 +29,13 @@ html
                 for badge in badges
                   //- If the badge is in this section, display it
                   if badge.badgeCategory === category.category
-                    a(href="##{badge.slug}")
+                    a(href="##{badge.slug}").badge
                       //- TODO: Add padding between badges
                       //- TODO: Add `.selected` highlighting
                       //- TODO: Consider doing an effect on hover
                       img(src=badge.icons.compact, alt="#{badge.description} badge")
+                    h3= badge.description
+                    p= badge.safeExtendedDescription
 
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
