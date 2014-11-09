@@ -117,6 +117,7 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Strip down JSON to what we need (e.g. delete most properties)
     - Smaller payload
     - Can be achieved now that we deliver the JSON with JS
+- Move to map for resolving badges by `slug` instead of linear loop
 
 ### Design
 #### Completed
