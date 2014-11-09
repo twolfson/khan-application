@@ -131,8 +131,8 @@ Originally planned to use `anchors` for persisting location between pages. After
 
 #### Missing
 - Responsive layout
-    - TODO: Screenshot current example
-    - TODO: Take care of this ^^
+    - I started working on this but ran out of time
+    - ![Responsive screenshot](docs/responsive.png)
 - Highlight selected element
     - There will be issus with hexagonal badges unless we find another way to indicate focus
 - Consider doing a hover effect for each badge
