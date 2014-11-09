@@ -1,7 +1,6 @@
 // Load in dependencies
 var BadgeExplorer = require('./badge-explorer');
 var badges = require('./badges.json');
-var categories = require('./categories.json');
 
 // Generate container for badge explorer
 var $detailView = $(
