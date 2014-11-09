@@ -129,6 +129,7 @@ Originally planned to use `anchors` for persisting location between pages. After
     - TODO: Screenshot current example
 - Highlight selected element
     - There will be issus with hexagonal badges unless we find another way to indicate focus
+- Consider doing a hover effect for each badge
 
 ### TODOs
 - Check inline TODOs
