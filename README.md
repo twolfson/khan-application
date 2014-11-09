@@ -138,9 +138,6 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Consider doing a hover effect for each badge
 - Crop category badge image because it is too tall
 
-### TODOs
-- Check inline TODOs
-
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt).
 
