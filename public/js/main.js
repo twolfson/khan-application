@@ -6,6 +6,14 @@ var categories = require('./categories.json');
 // Initialize our badge explorer against the body and render the virus badge
 var explorer = new BadgeExplorer($('.badge-switcher'));
 
+// Define a helper to keep track of the current badge
+// DEV: This is used for the previous and next function
+var currentBadge;
+function renderBadge(badge) {
+    currentBadge = badge;
+    explorer.render(badge);
+}
+
 // Define helper to render a badge for a slug
 function renderCurrentBadge() {
     // Find a matching badge for the hash (e.g. `#fact-checker` -> `fact-checker`)
@@ -25,14 +33,13 @@ function renderCurrentBadge() {
 
     // If we have a match, update the explorer
     if (matchingBadge) {
-        explorer.render(matchingBadge);
+        renderBadge(matchingBadge);
     }
 
     // Return the result
     return matchingBadge;
 }
 
-// TODO: If there is no badge selected
 // DEV: Use a closure to prevent conflict with `hashchange` listener
 (function renderFirstBadge () {
     // Use the current badge from the URL
@@ -42,6 +49,7 @@ function renderCurrentBadge() {
     if (_badge === null) {
         // DEV: We could query the DOM but that would be sloooow
         // Find the first badge and render it
+        // TODO: Pre-emptively stable sort badges by category
         var badge;
         var i = 0;
         var len = badges.length;
@@ -51,7 +59,7 @@ function renderCurrentBadge() {
                 break;
             }
         }
-        explorer.render(badge);
+        renderBadge(badge);
     }
 }());
 

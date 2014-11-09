@@ -43,7 +43,8 @@
     "grunt-curl": "~2.0.3",
     "grunt-templater": "0.0.6",
     "jade": "~1.7.0",
-    "opener": "~1.4.0"
+    "opener": "~1.4.0",
+    "stable": "~0.1.5"
   },
   "keywords": [],
   "private": true
