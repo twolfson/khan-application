@@ -11,32 +11,12 @@ var $detailView = $(
      '</div></div>');
 
 // Initialize our badge explorer against the body and render the virus badge
-var explorer = new BadgeExplorer($detailView.find('.badge-switcher'));
+var explorer = new BadgeExplorer($detailView.find('.badge-switcher'), badges);
 
-// Define helper to render a badge for a slug
+// Define helper to render a badge for the hash (e.g. `#fact-checker` -> `fact-checker`)
 function renderCurrentBadge() {
-    // Find a matching badge for the hash (e.g. `#fact-checker` -> `fact-checker`)
-    // TODO: Consider using a map for faster lookups `O(1)` (e.g. `badges['fact-checker']`)
-    var matchingBadgeIndex = null;
-    var i = 0;
-    var len = badges.length;
     var slug = window.location.hash.slice(1);
-    for (; i < len; i++) {
-        // If the badge's slug matches our slug, save it and stop
-        var badge = badges[i];
-        if (badge.slug === slug) {
-            matchingBadgeIndex = i;
-            break;
-        }
-    }
-
-    // If we have a match, update the explorer
-    if (matchingBadgeIndex !== null) {
-        explorer.renderBadgeByIndex(i);
-    }
-
-    // Return the result
-    return matchingBadgeIndex;
+    return explorer.renderBadgeBySlug(slug);
 }
 
 // DEV: Use a closure to prevent conflict with `hashchange` listener

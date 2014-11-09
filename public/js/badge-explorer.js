@@ -1,7 +1,9 @@
 // Define our badge explorer component
+// TODO: Move to an object as the parameter for better future proofing
 function BadgeExplorer(container, badges) {
-    // Save the container
+    // Save the container and badges
     this.$container = $(container);
+    this.badges = badges;
 
     // Generate our content, append them together, and add to our container
     // DEV: Create and memoize references to items once to prevent requerying
@@ -29,8 +31,27 @@ function BadgeExplorer(container, badges) {
     this.$container.append(this.$badge);
 }
 BadgeExplorer.prototype = {
-    renderBadgeByName: function (index) {
-        return this.render(index);
+    renderBadgeBySlug: function (slug) {
+        // Find a matching badge for the slug
+        // TODO: Consider using a map for faster lookups `O(1)` (e.g. `badges['fact-checker']`)
+        var i = 0;
+        var len = this.badges.length;
+        for (; i < len; i++) {
+            // If the badge's slug matches our slug, save it and stop
+            var badge = this.badges[i];
+            if (badge.slug === slug) {
+                matchingBadgeIndex = i;
+                break;
+            }
+        }
+
+        // If we have a match, update the explorer
+        if (matchingBadgeIndex !== null) {
+            return this.renderBadgeByIndex(i);
+        }
+
+        // Otherwwise, return `null`
+        return null;
     },
     renderBadgeByIndex: function (index) {
         return this.render(index);
@@ -39,7 +60,7 @@ BadgeExplorer.prototype = {
     // On a render call, update the content
     render: function (index) {
         // If the badge doesn't exist at the index, return `null`
-        var badge = badges[index];
+        var badge = this.badges[index];
         if (badge === undefined) {
             return null;
         }
@@ -48,8 +69,8 @@ BadgeExplorer.prototype = {
         // DEV: Since we have stable sorted we can directly access the previous/next
         var prevBadge = badges[index - 1] || badges[badges.length - 1];
         var nextBadge = badges[index + 1] || badges[0];
-        $prevBadge.attr('href', '#' + prevBadge.slug);
-        $nextBadge.attr('href', '#' + nextBadge.slug);
+        this.$prevBtn.attr('href', '#' + prevBadge.slug);
+        this.$nextBtn.attr('href', '#' + nextBadge.slug);
 
         // DEV: Since the image could take a bit of time to load, set it to nothing (otherwise, we will have lag between content pieces)
         // DEV: We don't want to use a spritesheet because that would be *really* big and defeat the purpose
