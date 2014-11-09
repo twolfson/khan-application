@@ -3,11 +3,13 @@ var BadgeExplorer = require('./badge-explorer');
 var badges = require('./badges.json');
 
 // Generate container for badge explorer
+var $detailViewPlaceholder = $('<div class="detail-view-placeholder">');
 var $detailView = $(
      '<div class="detail-view"><div class="container clearfix">' +
          '<div class="badge-switcher">' +
          '</div>' +
      '</div></div>');
+$('#page-contents').prepend($detailViewPlaceholder);
 $('#page-contents').prepend($detailView);
 
 // Initialize our badge explorer against the body and render the virus badge
