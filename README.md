@@ -3,7 +3,11 @@ Application for Khan Academy
 
 http://twolfson.github.io/khan-application/
 
+If you would like to evaluate the compiled assets, please visit our [gh-pages branch][].
+
 ![Screenshot](docs/screenshot.png)
+
+[gh-pages branch]: https://github.com/twolfson/khan-application/tree/gh-pages
 
 ## Getting started
 To set up the project locally, run the following steps:
