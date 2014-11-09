@@ -130,10 +130,12 @@ Originally planned to use `anchors` for persisting location between pages. After
 - Highlight selected element
     - There will be issus with hexagonal badges unless we find another way to indicate focus
 - Consider doing a hover effect for each badge
+- Add padding to badges
+    - TODO: Do this ^^
+    - If we take care of padding, then screenshot again
 
 ### TODOs
 - Check inline TODOs
-- If we take care of padding, then screenshot again
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt).
